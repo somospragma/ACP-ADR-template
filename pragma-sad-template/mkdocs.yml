@@ -1,0 +1,61 @@
+site_name: Pragma - Architecture Decision Records
+site_description: Architecture Decision Records for [Project Name]
+site_author: Architect-Team 
+site_url: https://github.com/somospragma/ACP-ADR-template
+
+# Copyright
+copyright: Copyright &copy; 2025 [Pragma - Account Name]
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - How to Use ADRs: getting-started/how-to-use.md
+    - Contributing: getting-started/contributing.md
+  - Architecture Decisions:
+    - All ADRs: adr/index.md
+    - Architecture: 
+      - Architecture Style: adr/architecture/001-architecture-style.md
+      - Architecture Characteristics: adr/architecture/001-architecture-style.md  
+    - Infrastructure:
+      - adr/infrastructure/index.md
+      - Cloud Provider: adr/infrastructure/0001-choose-cloud-provider.md
+      - CI/CD Pipeline: adr/infrastructure/0002-implement-ci-cd-pipeline.md
+      - Monitoring Solution: adr/infrastructure/0003-setup-monitoring-solution.md
+      - Container Orchestration: adr/infrastructure/0004-choose-kubernetes.md
+      - Infrastructure as Code: adr/infrastructure/0005-adopt-terraform.md
+    - Backend:
+      - adr/backend/index.md
+      - Programming Language: adr/backend/0006-choose-programming-language.md
+      - Web Framework: adr/backend/0007-select-web-framework.md
+      - Caching Strategy: adr/backend/0008-implement-caching-strategy.md
+      - API Design: adr/backend/0009-adopt-rest-api-design.md
+      - Authentication: adr/backend/0010-implement-oauth2.md
+    - Frontend:
+      - adr/frontend/index.md
+      - Frontend Framework: adr/frontend/0011-choose-frontend-framework.md
+      - State Management: adr/frontend/0012-implement-state-management.md
+      - Build Toolchain: adr/frontend/0013-setup-build-toolchain.md
+      - UI Component Library: adr/frontend/0014-choose-ui-library.md
+      - Testing Strategy: adr/frontend/0015-frontend-testing-approach.md
+    - Data:
+      - adr/data/index.md
+      - Database Technology: adr/data/0016-choose-database-technology.md
+      - Data Migration: adr/data/0017-design-data-migration-strategy.md
+      - Backup Solution: adr/data/0018-implement-data-backup-solution.md
+      - Data Processing: adr/data/0019-choose-data-processing-framework.md
+      - Data Warehouse: adr/data/0020-implement-data-warehouse.md
+    - Security:
+      - adr/security/index.md
+      - Security Framework: adr/security/0021-implement-security-framework.md
+      - Encryption Strategy: adr/security/0022-data-encryption-approach.md
+      - Access Control: adr/security/0023-implement-rbac.md
+      - Security Monitoring: adr/security/0024-security-monitoring-solution.md
+  - References:
+    - Glossary: references/glossary.md
+    - Decision Matrix: references/decision-matrix.md
+    - Status Overview: references/status-overview.md
+    - Tags: tags.md
+
+theme: readthedocs 
