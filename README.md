@@ -1,5 +1,7 @@
 # ACP-ADR-template
 This is a basic template of a repository to create, maintain and visualize Architecture Decision Records.
+> **_NOTE:_**  Template in progress, Any suggestion, please be free to contact me.
+
 ## Description
 This is a simple Documentation repository created with [Mkdocs](https://www.mkdocs.org/) to make a complete resource to manage ADR's in a Software Project.
 
@@ -36,7 +38,8 @@ This documentation is published using mkdocs + github pages with this URL:
 https://somospragma.github.io/ACP-ADR-template/
 This is the way that you can communicate your ADR's and to have a version control over this documentation
 
-
+## How to use this resource
+This is a template Repository, so you can create your own ADR' github repository from this template and customize it with your needs. 
   
 
 ## Author
