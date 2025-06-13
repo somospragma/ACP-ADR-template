@@ -1,4 +1,4 @@
-# JS Framework
+# Frontend Framework
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

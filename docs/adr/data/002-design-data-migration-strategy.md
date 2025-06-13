@@ -1,4 +1,4 @@
-# System Database
+# Migration Strategy
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 
