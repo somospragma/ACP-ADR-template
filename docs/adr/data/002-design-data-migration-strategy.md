@@ -1,4 +1,4 @@
-# Integration Style
+# System Database
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 
