@@ -1,4 +1,5 @@
-# Frontend Framework
+# Adopt-Terraform: [Short descriptive title]
+
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

@@ -1,4 +1,4 @@
-# Frontend Framework
+# ]Encryption approach
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

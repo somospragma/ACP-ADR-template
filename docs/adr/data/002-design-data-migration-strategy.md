@@ -1,4 +1,4 @@
-# Frontend Framework
+# Migration Strategy
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

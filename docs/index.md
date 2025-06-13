@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Architecture Decision Record - Pragma : ==Project Name==
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Repository to create, update and communicate [ADR](https://scrum-master.org/en/architecture-decision-record-how-and-why-use-adrs/) in the context of a solution architecture documentation  ==(SAD)[https://link-to-SAD]==
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Decision Domains
+The ADR's are categorized as follows:
+~~You can choose your own categories~~
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. Architecture Decisions
+2. Infrastructure Decisions
+3. Backend Decisions
+4. Frontend / Mobile Decisions
+5. Data Decisions
+6. Security Decisions

@@ -1,4 +1,5 @@
-# Frontend Framework
+# Testing strategy
+
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

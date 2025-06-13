@@ -1,4 +1,5 @@
-# Frontend Framework
+# Architecture Goals: [Short descriptive title]
+
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 
@@ -10,6 +11,7 @@
 
 ## Context
 Describe the forces at play, including technological, political, social, and project local. These forces are probably in tension, and should be called out. The language in this section is value-neutral. It is simply describing the current situation and the problem that needs to be solved.
+
 
 ## Decision
 This section describes our response to these forces. It is stated in full sentences, with active voice. "We will..."

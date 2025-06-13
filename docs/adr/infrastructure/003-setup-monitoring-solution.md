@@ -1,4 +1,5 @@
-# Frontend Framework
+# Monitoring Solution: [Short descriptive title]
+
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 

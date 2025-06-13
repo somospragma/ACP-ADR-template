@@ -1,4 +1,5 @@
-# Integration Style
+# Performance Testing
+
 ## Status
 **Current Status:** [Proposed | Accepted | Rejected | Deprecated | Superseded]
 
