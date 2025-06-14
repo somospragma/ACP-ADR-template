@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Architect-Team" /><link rel="canonical" href="https://github.com/somospragma/ACP-ADR-template/adr/backend/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Overview - Pragma - Architecture Decision Records</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "adr/backend/index.md";
+        var mkdocs_page_url = "/somospragma/ACP-ADR-template/adr/backend/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Pragma - Architecture Decision Records
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/how-to-use/">How to Use ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/contributing/">Contributing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture Decisions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">All ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../architecture/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../architecture/001-architecture-style/">Architecture Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../architecture/002-architecture-goals/">Architecture Characteristics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Infrastructure</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/001-choose-cloud-provider/">Cloud Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/002-Choose-devops-platform/">CI/CD Pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/003-setup-monitoring-solution/">Monitoring Solution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/004-choose-kubernetes/">Container Orchestration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../infrastructure/005-adopt-terraform/">Infrastructure as Code</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Backend</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="001-choose-programming-language/">Programming Language</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="002-select-web-framework/">Web Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="003-implement-caching-strategy/">Caching Strategy</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Frontend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../frontend/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../frontend/001-choose-frontend-framework/">Frontend Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../frontend/002-implement-state-management/">State Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../frontend/003-setup-build-toolchain/">Build Toolchain</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../data/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/001-choose-database-technology/">Database Technology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/002-design-data-migration-strategy/">Data Migration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../data/003-implement-data-backup-solution/">Backup Solution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../security/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../security/001-implement-security-framework/">Security Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../security/002-data-encryption-approach/">Encryption Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../security/003-implement-rbac/">Access Control</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Testing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../testing/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../testing/001-define-testing-strategy/">Testing Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../testing/002-setup-test-automation/">Test Automation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../testing/003-implement-performance-testing/">Performance Testing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">References</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../references/glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../references/decision-matrix/">Decision Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../references/status-overview/">Status Overview</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Pragma - Architecture Decision Records</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Architecture Decisions</li>
+          <li class="breadcrumb-item">Backend</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="overview">Overview</h1>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../infrastructure/005-adopt-terraform/" class="btn btn-neutral float-left" title="Infrastructure as Code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="001-choose-programming-language/" class="btn btn-neutral float-right" title="Programming Language">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 [Pragma - Account Name]</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../infrastructure/005-adopt-terraform/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="001-choose-programming-language/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

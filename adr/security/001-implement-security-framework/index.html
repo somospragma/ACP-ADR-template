@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Architect-Team" /><link rel="canonical" href="https://github.com/somospragma/ACP-ADR-template/adr/security/001-implement-security-framework/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Security Framework - Pragma - Architecture Decision Records</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Security Framework";
+        var mkdocs_page_input_path = "adr/security/001-implement-security-framework.md";
+        var mkdocs_page_url = "/somospragma/ACP-ADR-template/adr/security/001-implement-security-framework/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Pragma - Architecture Decision Records
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/how-to-use/">How to Use ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/contributing/">Contributing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture Decisions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">All ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../architecture/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../architecture/001-architecture-style/">Architecture Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../architecture/002-architecture-goals/">Architecture Characteristics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Infrastructure</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/001-choose-cloud-provider/">Cloud Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/002-Choose-devops-platform/">CI/CD Pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/003-setup-monitoring-solution/">Monitoring Solution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/004-choose-kubernetes/">Container Orchestration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../infrastructure/005-adopt-terraform/">Infrastructure as Code</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Backend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../backend/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../backend/001-choose-programming-language/">Programming Language</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../backend/002-select-web-framework/">Web Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../backend/003-implement-caching-strategy/">Caching Strategy</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Frontend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../frontend/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../frontend/001-choose-frontend-framework/">Frontend Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../frontend/002-implement-state-management/">State Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../frontend/003-setup-build-toolchain/">Build Toolchain</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../data/001-choose-database-technology/">Database Technology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../data/002-design-data-migration-strategy/">Data Migration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../data/003-implement-data-backup-solution/">Backup Solution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Security</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">ADR overview</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Security Framework</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#status">Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#context">Context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decision">Decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#consequences">Consequences</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#positive-consequences">Positive Consequences</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#negative-consequences">Negative Consequences</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#neutral-consequences">Neutral Consequences</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#alternatives-considered">Alternatives Considered</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#alternative-1-name">Alternative 1: [Name]</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#alternative-2-name">Alternative 2: [Name]</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#references">References</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../002-data-encryption-approach/">Encryption Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../003-implement-rbac/">Access Control</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Testing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../testing/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../testing/001-define-testing-strategy/">Testing Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../testing/002-setup-test-automation/">Test Automation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../testing/003-implement-performance-testing/">Performance Testing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">References</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../references/glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../references/decision-matrix/">Decision Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../references/status-overview/">Status Overview</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Pragma - Architecture Decision Records</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Architecture Decisions</li>
+          <li class="breadcrumb-item">Security</li>
+      <li class="breadcrumb-item active">Security Framework</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="security-framework">Security Framework</h1>
+<h2 id="status">Status</h2>
+<p><strong>Current Status:</strong> [Proposed | Accepted | Rejected | Deprecated | Superseded]</p>
+<p><strong>Date:</strong> YYYY-MM-DD</p>
+<p><strong>Deciders:</strong> [List of people involved in the decision]</p>
+<p><strong>Technical Story:</strong> [Optional: Link to relevant ticket/issue]</p>
+<h2 id="context">Context</h2>
+<p>Describe the forces at play, including technological, political, social, and project local. These forces are probably in tension, and should be called out. The language in this section is value-neutral. It is simply describing the current situation and the problem that needs to be solved.</p>
+<h2 id="decision">Decision</h2>
+<p>This section describes our response to these forces. It is stated in full sentences, with active voice. "We will..."</p>
+<p>State the architecture decision and provide detailed justification for why this particular solution was chosen over alternatives.</p>
+<h2 id="rationale">Rationale</h2>
+<p>Explain the reasoning behind the decision. Include:
+- Key factors that influenced the decision
+- Trade-offs that were considered
+- Why this option was preferred over alternatives
+- Any assumptions made</p>
+<h2 id="consequences">Consequences</h2>
+<p>Describe the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.</p>
+<h3 id="positive-consequences">Positive Consequences</h3>
+<ul>
+<li>[e.g., improvement in performance, better maintainability, etc.]</li>
+<li>[...]</li>
+</ul>
+<h3 id="negative-consequences">Negative Consequences</h3>
+<ul>
+<li>[e.g., increased complexity, learning curve, etc.]</li>
+<li>[...]</li>
+</ul>
+<h3 id="neutral-consequences">Neutral Consequences</h3>
+<ul>
+<li>[e.g., changes in team structure, new tools, etc.]</li>
+<li>[...]</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<p>Describe how this decision will be implemented:
+- Steps required
+- Timeline
+- Resources needed
+- Who is responsible</p>
+<h2 id="alternatives-considered">Alternatives Considered</h2>
+<p>List the alternative solutions that were evaluated:</p>
+<h3 id="alternative-1-name">Alternative 1: [Name]</h3>
+<ul>
+<li><strong>Description:</strong> Brief description of the alternative</li>
+<li><strong>Pros:</strong> Benefits of this approach</li>
+<li><strong>Cons:</strong> Drawbacks of this approach</li>
+<li><strong>Reason for rejection:</strong> Why this wasn't chosen</li>
+</ul>
+<h3 id="alternative-2-name">Alternative 2: [Name]</h3>
+<ul>
+<li><strong>Description:</strong> Brief description of the alternative</li>
+<li><strong>Pros:</strong> Benefits of this approach</li>
+<li><strong>Cons:</strong> Drawbacks of this approach</li>
+<li><strong>Reason for rejection:</strong> Why this wasn't chosen</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>[Link to relevant documentation]</li>
+<li>[Link to research papers or articles]</li>
+<li>[Link to similar decisions in other projects]</li>
+<li>[Link to discussion threads]</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>Any additional information, follow-up items, or related decisions.</p>
+<hr />
+<p><strong>Revision History:</strong>
+- YYYY-MM-DD: Initial version
+- YYYY-MM-DD: [Description of changes]</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="ADR overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../002-data-encryption-approach/" class="btn btn-neutral float-right" title="Encryption Strategy">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 [Pragma - Account Name]</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../002-data-encryption-approach/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Architect-Team" />
+      <link rel="shortcut icon" href="/somospragma/ACP-ADR-template/img/favicon.ico" />
+    <title>Pragma - Architecture Decision Records</title>
+    <link rel="stylesheet" href="/somospragma/ACP-ADR-template/css/theme.css" />
+    <link rel="stylesheet" href="/somospragma/ACP-ADR-template/css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+    <!--[if lt IE 9]>
+      <script src="/somospragma/ACP-ADR-template/js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="/somospragma/ACP-ADR-template/." class="icon icon-home"> Pragma - Architecture Decision Records
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="/somospragma/ACP-ADR-template//search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/.">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/getting-started/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/getting-started/how-to-use/">How to Use ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/getting-started/contributing/">Contributing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture Decisions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/">All ADRs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/architecture/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/architecture/001-architecture-style/">Architecture Style</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/architecture/002-architecture-goals/">Architecture Characteristics</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Infrastructure</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/001-choose-cloud-provider/">Cloud Provider</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/002-Choose-devops-platform/">CI/CD Pipeline</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/003-setup-monitoring-solution/">Monitoring Solution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/004-choose-kubernetes/">Container Orchestration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/infrastructure/005-adopt-terraform/">Infrastructure as Code</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Backend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/backend/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/backend/001-choose-programming-language/">Programming Language</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/backend/002-select-web-framework/">Web Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/backend/003-implement-caching-strategy/">Caching Strategy</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Frontend</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/frontend/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/frontend/001-choose-frontend-framework/">Frontend Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/frontend/002-implement-state-management/">State Management</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/frontend/003-setup-build-toolchain/">Build Toolchain</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/data/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/data/001-choose-database-technology/">Database Technology</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/data/002-design-data-migration-strategy/">Data Migration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/data/003-implement-data-backup-solution/">Backup Solution</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/security/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/security/001-implement-security-framework/">Security Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/security/002-data-encryption-approach/">Encryption Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/security/003-implement-rbac/">Access Control</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Testing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/testing/">ADR overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/testing/001-define-testing-strategy/">Testing Strategy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/testing/002-setup-test-automation/">Test Automation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="/somospragma/ACP-ADR-template/adr/testing/003-implement-performance-testing/">Performance Testing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">References</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/references/glossary/">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/references/decision-matrix/">Decision Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/somospragma/ACP-ADR-template/references/status-overview/">Status Overview</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="/somospragma/ACP-ADR-template/.">Pragma - Architecture Decision Records</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="/somospragma/ACP-ADR-template/." class="icon icon-home" aria-label="Docs"></a></li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+
+  <h1 id="404-page-not-found">404</h1>
+
+  <p><strong>Page not found</strong></p>
+
+
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 [Pragma - Account Name]</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="/somospragma/ACP-ADR-template/js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "/somospragma/ACP-ADR-template/";</script>
+    <script src="/somospragma/ACP-ADR-template/js/theme_extra.js"></script>
+    <script src="/somospragma/ACP-ADR-template/js/theme.js"></script>
+      <script src="/somospragma/ACP-ADR-template/search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
