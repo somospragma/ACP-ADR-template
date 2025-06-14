@@ -1,4 +1,4 @@
-# Architecture Decision Record - Pragma : ==Project Name==
+# Architecture Decision Record - Pragma : `Project Name`
 
 Repository to create, update and communicate [ADR](https://scrum-master.org/en/architecture-decision-record-how-and-why-use-adrs/) in the context of a solution architecture documentation  ==(SAD)[https://link-to-SAD]==
 
